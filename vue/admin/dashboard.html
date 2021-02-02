@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Dashboard | MERRUshop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="author" content="Athanase Bahizire" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+<!-- Favicon and Touch Icons -->
+<link href="../images/favicon.png" rel="shortcut icon" type="image/png">
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<!-- font-awesome icons CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons CSS-->
+
+<!-- side nav css file -->
+<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
+<!-- //side nav css file -->
+ 
+ <!-- js-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+
+
+<!-- chart -->
+<script src="js/Chart.js"></script>
+<!-- //chart -->
+
+<!-- Metis Menu -->
+<script src="js/metisMenu.min.js"></script>
+<script src="js/custom.js"></script>
+<link href="css/custom.css" rel="stylesheet">
+<!--//Metis Menu -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 295px;
+}
+</style>
+
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<!--
+URL:            http://brainsdevelopers.tech 
+-->
+<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<!--left-fixed -navigation-->
+		<aside class="sidebar-left">
+      <nav class="navbar navbar-inverse">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <h1><a  href="dashboard.html"><img src="../images/logo-wide1.png"/></a></h1>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="sidebar-menu">
+              <li class="header">PRINCIPAL NAVIGATION</li>
+              <li class="treeview">
+                <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+              </li>
+			  <li class="treeview">
+                <a href="#">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Products</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="newproduct.html"><i class="fa fa-angle-right"></i>New product</a></li>
+                  <li><a href="products.html"><i class="fa fa-angle-right"></i>Products</a></li>
+                  <li><a href="products.html"><i class="fa fa-angle-right"></i>Categories</a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-photo"></i>
+                <span>Gallerie</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="gallery.html"><i class="fa fa-angle-right"></i> Images</a></li>
+                  <li><a href="gallery.html"><i class="fa fa-angle-right"></i> Slides</a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-building"></i> <span>Pages</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="pages.html"><i class="fa fa-angle-right"></i> About Us</a></li>
+                  <li><a href="contacts.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+                  <li><a href="pages.html"><i class="fa fa-angle-right"></i> Privacy</a></li>
+                  <li><a href="pages.html"><i class="fa fa-angle-right"></i> Terms</a></li>
+                  <li><a href="pages.html"><i class="fa fa-angle-right"></i> Delivery</a></li>
+                  <li><a href="team.html"><i class="fa fa-angle-right"></i> Team</a></li>
+                  <li><a href="pages.html"><i class="fa fa-angle-right"></i> Promotions</a></li>
+                  <li><a href="map.html"><i class="fa fa-angle-right"></i> Location</a></li>
+                </ul>
+              </li>
+
+              <li class="header">OTHERS</li>
+              <li class="treeview">
+                <a href="inbox.html">
+                <i class="fa fa-envelope"></i> <span>Messages </span>
+
+				<small class="label pull-right label-danger">6</small>
+				</a>
+              </li>
+              <li><a href="sales.html"><i class="fa fa-angle-right text-red"></i> <span>Sales</span></a></li>
+              <li><a href="users.html"><i class="fa fa-angle-right text-red"></i> <span>Users</span></a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </nav>
+    </aside>
+	</div>
+		<!--left-fixed -navigation-->
+		
+		<!-- header-starts -->
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<!--toggle button start-->
+				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+				<!--toggle button end-->
+				<div class="profile_details_left"><!--notifications of menu start -->
+					<ul class="nofitications-dropdown">
+						<li class="dropdown head-dpdn">
+							<a href="inbox.html" class="dropdown-toggle" ><i class="fa fa-envelope"></i>
+								<span class="badge">6</span>
+							</a>
+						</li>
+						<li class="dropdown head-dpdn">
+							<a href="home.html" class=" btn-flat dropdown-toggle text-white" ><i class="fa fa-globe"></i> Go to the site</a>
+						</li>
+					</ul>
+				</div>
+				<!--notification menu end -->
+			</div>
+			<div class="header-right">
+				<div class="profile_details">	
+					<ul>
+						<li class="dropdown profile_details_drop">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<div class="profile_img">	
+									<span class="prfil-img"><img src="../images/user/1600431591.jpg" alt="" height="50px" > </span>
+									<div class="user-name">
+										<p>Athola</p>
+										<span>@admin</span>
+									</div>
+									<i class="fa fa-angle-down lnr"></i>
+									<i class="fa fa-angle-up lnr"></i>
+									<div class="clearfix"></div>	
+								</div>	
+							</a>
+							<ul class="dropdown-menu drp-mnu">
+								<li> <a href="profile.html"><i class="fa fa-user"></i> Profile</a> </li> 
+								<li> <a href="#"><i class="fa fa-power-off"></i> Disconnect</a> </li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="clearfix"> </div>				
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //header-ends -->		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page">
+			<div class="col_3">
+        	<div class="col-md-3 widget "><a href="products.html">
+        		<div class="r3_counter_box">
+                    <i class="pull-left fa fa-shopping-cart user1 icon-rounded"></i>
+                    <div class="stats">
+                      <h5><strong>13</strong></h5>
+                      <span>Products</span>
+                    </div>
+                </div></a>
+        	</div>
+        	<div class="col-md-3 col-md-offset-2 widget "><a href="sales.html">
+        		<div class="r3_counter_box">
+                    <i class="pull-left fa fa-credit-card user1 icon-rounded"></i>
+                    <div class="stats">
+                      <h5><strong>2</strong></h5>
+                      <span>Sales</span>
+                    </div>
+                </div></a>
+        	</div>
+        	<div class="col-md-3 col-md-offset-2 widget "><a href="gallery.html">
+        		<div class="r3_counter_box">
+                    <i class="pull-left fa fa-picture-o user1 icon-rounded"></i>
+                    <div class="stats">
+                      <h5><strong>31</strong></h5>
+                      <span>Photos</span>
+                    </div>
+                </div></a>
+        	</div>
+        	<div class="clearfix"> </div>
+		</div>
+		
+		<div class="row-one widgettable">
+		<div class="col-md-10 charts-grids states-mdl" style="height:425px;">
+						<div class="card-header">
+							<h3>New Products</h3>
+						</div>
+						<div id="chartdiv"></div>
+					</div>
+			
+			<div class="col-md-2 stat">
+				<div class="content-top">
+					<div class="top-content facebook">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+					</div>
+					<ul class="info">
+						<li class="col-md-6"><b>1,296</b><p>Friends</p></li>
+						<li class="col-md-6"><b>647</b><p>Likes</p></li>
+						<div class="clearfix"></div>
+					</ul>
+				</div>
+				<div class="content-top">
+					<div class="top-content twitter">
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+					<ul class="info">
+						<li class="col-md-6"><b>1,997</b><p>Follow</p></li>
+						<li class="col-md-6"><b>389</b><p>Tweets</p></li>
+						<div class="clearfix"></div>
+					</ul>
+				</div>
+				<div class="content-top">
+					<div class="top-content google-plus">
+						<a href="#"><i class="fa fa-youtube-play"></i></a>
+					</div>
+					<ul class="info">
+						<li class="col-md-6"><b>1,216</b><p>Follow</p></li>
+						<li class="col-md-6"><b>321</b><p>Shares</p></li>
+						<div class="clearfix"></div>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+				
+	<!-- for amcharts js -->
+			<script src="js/amcharts.js"></script>
+			<script src="js/serial.js"></script>
+			<script src="js/light.js"></script>
+	<!-- for amcharts js -->
+	
+			</div>
+		</div>
+
+  	<!--footer-->
+	<div class="footer">
+	   <p>Copyright &copy;2020 Athanase Bahizire. All Rights Reserved  <a href="http://brainsdevelopers.tech " target="_blank">@Brainsdevelopers</a></p>		
+	</div>
+    <!--//footer-->
+<!--
+Project:       PC Sacre Coeur
+Author:         Athanase Bahizire
+URL:            http://brainsdevelopers.tech 
+-->	</div>
+
+	
+	<!-- Classie --><!-- for toggle left push menu script -->
+		<script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+				
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+	<!-- //Classie --><!-- //for toggle left push menu script -->
+		
+	<!--scrolling js--> 
+	<script src="js/scripts.js"></script>
+	<!--//scrolling js-->
+	
+	<!-- side nav js -->
+	<script src='js/SidebarNav.min.js' type='text/javascript'></script>
+	<script>
+      $('.sidebar-menu').SidebarNav()
+    </script>
+	<!-- //side nav js -->
+	
+	<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.js"> </script>
+	<!-- //Bootstrap Core JavaScript -->
+	
+	<script>
+	var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "theme": "light",
+  "dataDateFormat": "YYYY-MM-DD",
+  "precision": 0,
+  "valueAxes": [{
+    "id": "v1",
+    "title": "Number of products",
+    "position": "left",
+    "autoGridCount": false,
+    "labelFunction": function(value) {
+      return  Math.round(value)  ;
+    }
+  }],
+  "graphs": [{
+    "id": "g3",
+    "valueAxis": "v1",
+    "lineColor": "#e1ede9",
+    "fillColors": "#f40000",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "Products",
+    "valueField": "products",
+    "clustered": false,
+    "columnWidth": 0.5,
+    "legendValueText": "[[value]]",
+    "balloonText": "[[title]]<br /><b style='font-size: 130%'>[[value]]</b>"
+  }],
+  "chartScrollbar": {
+    "graph": "g1",
+    "oppositeAxis": false,
+    "offset": 30,
+    "scrollbarHeight": 50,
+    "backgroundAlpha": 0,
+    "selectedBackgroundAlpha": 0.1,
+    "selectedBackgroundColor": "#f40000",
+    "graphFillAlpha": 0,
+    "graphLineAlpha": 0.5,
+    "selectedGraphFillAlpha": 0,
+    "selectedGraphLineAlpha": 1,
+    "autoGridCount": true,
+    "color": "#f40000"
+  },
+  "chartCursor": {
+    "pan": true,
+    "valueLineEnabled": true,
+    "valueLineBalloonEnabled": true,
+    "cursorAlpha": 0,
+    "valueLineAlpha": 0.2
+  },
+  "categoryField": "date",
+  "categoryAxis": {
+    "parseDates": true,
+    "dashLength": 1,
+    "minorGridEnabled": true
+  },
+  "legend": {
+    "useGraphSettings": true,
+    "position": "top"
+  },
+  "balloon": {
+    "borderThickness": 1,
+    "shadowAlpha": 0
+  },
+  "export": {
+   "enabled": true
+  },
+
+  "dataProvider": [{
+    "date": "2021-01-09",
+    "products": 0  }, {
+    "date": "2021-01-10",
+    "products": 0  }, {
+    "date": "2021-01-11",
+    "products": 0  }, {
+    "date": "2021-01-12",
+    "products": 0  }, {
+    "date": "2021-01-13",
+    "products": 6  }, {
+    "date": "2021-01-14",
+    "products": 0  }, {
+    "date": "2021-01-15",
+    "products": 0  }, {
+    "date": "2021-01-16",
+    "products": 0  }, {
+    "date": "2021-01-17",
+    "products": 3  }, {
+    "date": "2021-01-18",
+    "products": 0  }, {
+    "date": "2021-01-19",
+    "products": 0  }, {
+    "date": "2021-01-20",
+    "products": 0  }, {
+    "date": "2021-01-21",
+    "products": 0  }, {
+    "date": "2021-01-22",
+    "products": 0  }, {
+    "date": "2021-01-23",
+    "products": 0  }]
+});
+    </script>
+</body>
+</html>
+<!--
+Author:         Athanase Bahizire
+URL:            http://brainsdevelopers.tech 
+-->

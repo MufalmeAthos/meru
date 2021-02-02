@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400,600,700,800');
+@import url(spinners.css);
+@import url(animate.css);
+/*!
+Author:         Athanase Bahizire
+URL:            http://brainsdevelopers.tech 
+
+    Table of Content
+    ================
+
+1. variable
+2. fonts
+3. card
+4. global
+5. badge
+6. tab
+7. modal
+8. timeline
+9. data-table
+10. panel
+11. button
+12. header
+13. gmap
+14. chat
+15. carousel
+16. weather
+17. invoice-edit
+18. invoice
+19. widget-stat
+20. recent-comments
+21. recent-message
+22. forms
+23. compose-email
+24. progress-bar
+25. todo-list
+26. datamap
+27. table
+28. order-progress
+29. login
+30. chart
+31. nestable
+32. profile
+33. profile-widget
+34. ui-element-basic
+35. calendar
+36. flot-chart
+37. morris-chart
+38. products_1
+39. products_2
+40. products_3
+41. favourite_menu
+42. order-list
+43. booking-system
+44. scrollable
+45. vector-map
+46. menu-upload
+47. social-media-stats
+48. vertical-carousel
+49. chartist
+50. table-export
+51. ui-widget-v1
+42. responsive
+
+*/
+.dt-buttons {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-top: 5px;
+}
+.dt-buttons .dt-button {
+  background: #d9534f none repeat scroll 0 0;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 3px;
+  padding: 5px 15px;
+}
+.dt-buttons .dt-button:hover {
+  background: #2f3d4a none repeat scroll 0 0;
+}
+.dataTables_info,
+.dataTables_length {
+  display: inline-block;
+}
+.dataTables_length {
+  margin-top: 10px;
+}
+.dataTables_length select {
+  background-color: transparent;
+  background-image: linear-gradient(#d9534f, #d9534f), linear-gradient(#b1b8bb, #b1b8bb);
+  background-position: center bottom, center calc(99%);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  border: 0 none;
+  padding-bottom: 5px;
+  transition: background 0s ease-out 0s;
+}
+.dataTables_length select:focus {
+  background-image: linear-gradient(#d9534f, #d9534f), linear-gradient(#b1b8bb, #b1b8bb);
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  outline: medium none;
+  transition-duration: 0.3s;
+}
+.dataTables_filter {
+  float: right;
+  margin-top: 10px;
+}
+.dataTables_filter input {
+  background-color: transparent;
+  background-image: linear-gradient(#d9534f, #d9534f), linear-gradient(#b1b8bb, #b1b8bb);
+  background-position: center bottom, center calc(99%);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  float: none;
+  margin-left: 10px;
+  transition: background 0s ease-out 0s;
+}
+.dataTables_filter input:focus {
+  background-image: linear-gradient(#d9534f, #d9534f), linear-gradient(#b1b8bb, #b1b8bb);
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  outline: medium none;
+  transition-duration: 0.3s;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_desc_disabled {
+  background: transparent none repeat scroll 0 0;
+}
+table.dataTable thead .sorting_asc::after {
+  content: "";
+  cursor: pointer;
+  font-family: fontawesome;
+  margin-left: 10px;
+}
+table.dataTable thead .sorting_desc::after {
+  content: "";
+  cursor: pointer;
+  font-family: fontawesome;
+  margin-left: 10px;
+}
+table.dataTable thead .sorting::after {
+  color: rgba(50, 50, 50, 0.5);
+  content: "";
+  cursor: pointer;
+  font-family: fontawesome !important;
+  margin-left: 10px;
+}
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  padding-top: 0.25em;
+  text-align: right;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  color: #67757c;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background-color: #d9534f;
+  border: 1px solid #d9534f;
+  color: #ffffff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #67757c;
+  cursor: default;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #d9534f;
+  border: 1px solid #d9534f;
+  color: white;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+  background-color: #67757c;
+  outline: medium none;
+}
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+  padding: 0 1em;
+}
+.tablesaw-bar .btn-group label {
+  color: #67757c !important;
+}
+.dt-bootstrap {
+  display: block;
+}
+
+/*
+/* Version: 1.0
+*/
+/*-------- css code for responsive layout  --------*/
+/*  To make Responsive
+---------------------------------------------------------------------- /
+*	1 - media screen and (max-width: 1750px)
+*   2 - media screen and (max-width: 1680px)
+*   3 - media screen and (max-width: 1280px)
+*   4 - media screen and (max-width: 1199px)
+*   5 - media screen and (max-width: 1024px)
+*   6 - media screen and (max-width: 991px)
+*   7 - media screen and (max-width: 767px)
+*   8 - media screen and (max-width: 680px)
+*   9 - media screen and (max-width: 480px)
+*   10 - media screen and (max-width: 320px)
+*
+---------------------------------------------------------------------- */
+/*  1 - media screen and (max-width: 1750px)
+---------------------------------------------------------------------- */
+/*  1 - media screen and (max-width: 1750px)
+---------------------------------------------------------------------- */
+/*  1 - media screen and (max-width: 1750px) End
+---------------------------------------------------------------------- */
+/*  2 - media screen and (max-width: 1680px)
+---------------------------------------------------------------------- */
+/*  2 - media screen and (max-width: 1680px) End
+---------------------------------------------------------------------- */
+/*  3 - media screen and (max-width: 1280px)
+---------------------------------------------------------------------- */
+/*  3 - media screen and (max-width: 1280px) End
+---------------------------------------------------------------------- */
+/*  4 - media screen and (max-width: 1199px)
+---------------------------------------------------------------------- */
+/*  4 - media screen and (max-width: 1199px) End
+---------------------------------------------------------------------- */
+/*  5 - media screen and (max-width: 1024px)
+---------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+}
+/*  5 - media screen and (max-width: 1024px) End
+---------------------------------------------------------------------- */
+/*  6 - media screen and (max-width: 991px)
+---------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+}
+/*  6 - media screen and (max-width: 991px) End
+---------------------------------------------------------------------- */
+/*  7 - media screen and (max-width: 767px)
+---------------------------------------------------------------------- */
+@media (min-width: 680px) and (max-width: 767px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+  .footer {
+    left: 0;
+  }
+}
+/*  7 - media screen and (max-width: 767px) End
+---------------------------------------------------------------------- */
+/*  8 - media screen and (max-width: 680px)
+---------------------------------------------------------------------- */
+@media (min-width: 480px) and (max-width: 679px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+  .inbox-pagination {
+    margin-top: 30px;
+    float: left !important;
+  }
+  .card-badge .label {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .mail-box .sm-side {
+    width: 100%;
+  }
+  .mail-box aside {
+    display: inline;
+  }
+  .footer {
+    left: 0;
+  }
+}
+/*  8 - media screen and (max-width: 680px) End
+---------------------------------------------------------------------- */
+/*  9 - media screen and (max-width: 480px)
+---------------------------------------------------------------------- */
+@media (min-width: 360px) and (max-width: 479px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+  #project {
+    margin-left: 0;
+  }
+  .fc-toolbar .fc-right {
+    float: left;
+    margin-top: 15px;
+  }
+  .card-badge .label {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .mail-box .sm-side {
+    width: 100%;
+  }
+  .mail-box aside {
+    display: inline;
+  }
+  .footer {
+    left: 0;
+  }
+}
+/*  9 - media screen and (max-width: 360px) End
+---------------------------------------------------------------------- */
+/*  10 - media screen and (max-width: 320px)
+---------------------------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 359px) {
+  .title-margin-right {
+    margin-right: 7px !important;
+  }
+  .title-margin-left {
+    margin-left: 7px !important;
+  }
+  #project {
+    margin-left: 0;
+  }
+  .fc-toolbar .fc-right {
+    float: left;
+    margin-top: 15px;
+  }
+  .br-theme-bars-pill .br-widget a {
+    padding: 7px 12px;
+  }
+  .br-theme-bars-reversed .br-widget .br-current-rating {
+    padding: 0;
+  }
+  .alert-rating {
+    padding-bottom: 40px;
+  }
+  .card-badge .label {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .mail-box .sm-side {
+    width: 100%;
+  }
+  .mail-box aside {
+    display: inline;
+  }
+  .chk-group {
+    margin-bottom: 10px;
+  }
+  .pagination-list {
+    float: left !important;
+    margin-top: 10px;
+  }
+  .inner-append {
+    position: relative;
+  }
+  .inner-append .append-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .input-text {
+    margin-bottom: 12px;
+  }
+  .footer {
+    left: 0;
+  }
+}
+/*  10 - media screen and (max-width: 320px)
+---------------------------------------------------------------------- */
+/*---------------------------------------------------------------*/
+/* Retina */
+/*---------------------------------------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .default-logo {
+    display: none !important;
+  }
+  .retina-logo {
+    display: inline-block !important;
+  }
+}

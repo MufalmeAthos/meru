@@ -1,0 +1,15 @@
+/*!
+Project:       PC Sacre Coeur
+Author:         Athanase Bahizire
+URL:            http://brainsdevelopers.tech 
+ */
+.jqcandlestick-container {
+  position: relative;
+  cursor: none;
+}
+.jqcandlestick-canvas {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
